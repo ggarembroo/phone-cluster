@@ -174,6 +174,8 @@ public class MainActivity extends Activity {
     LinearLayout statusActions = row();
     statusActions.addView(action("START NODE", true, this::startNode), weight());
     statusActions.addView(spaceView(8));
+    statusActions.addView(action("COPY", false, this::copyEndpoint), weight());
+    statusActions.addView(spaceView(8));
     statusActions.addView(action("STOP", false, this::stopNode), weight());
     status.addView(statusActions);
     page.addView(status);
@@ -464,6 +466,17 @@ public class MainActivity extends Activity {
         runOnUiThread(() -> toast("Model copy failed: " + e.getMessage()));
       }
     });
+  }
+
+  private void copyEndpoint() {
+    if (hostEndpoint == null || hostEndpoint.isEmpty()) {
+      toast("Start the node first");
+      return;
+    }
+    ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+    if (cm == null) return;
+    cm.setPrimaryClip(ClipData.newPlainText("Phone Cluster pair address", hostEndpoint));
+    toast("Pair address copied");
   }
 
   private void pasteEndpoint() {
