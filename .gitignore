@@ -1,0 +1,15 @@
+.gradle/
+.idea/
+*.iml
+build/
+app/build/
+local.properties
+models/
+*.gguf
+*.apk
+*.aab
+*.mp4
+*.wav
+shot-*.png
+screen-*.mp4
+.DS_Store

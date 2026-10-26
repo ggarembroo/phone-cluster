@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360" role="img" aria-labelledby="title desc">
+  <title id="title">Phone Cluster architecture</title>
+  <desc id="desc">A model phone runs llama-server and a compute node runs ggml-rpc-server over a local network.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070b11"/>
+      <stop offset="1" stop-color="#101927"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b8ff3d"/>
+      <stop offset="1" stop-color="#55d7ff"/>
+    </linearGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.1" fill="#3b5168" opacity="0.55"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="360" fill="url(#bg)"/>
+  <rect width="1000" height="360" fill="url(#dots)"/>
+  <text x="44" y="46" font-family="ui-monospace, Consolas, monospace" font-size="10" fill="#b8ff3d" letter-spacing="2">REFERENCE TOPOLOGY / 01</text>
+  <text x="44" y="78" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800" fill="#f4f7f2">One model. Two runtimes.</text>
+
+  <g transform="translate(44 122)">
+    <rect width="310" height="170" rx="22" fill="#0b121c" stroke="#304157"/>
+    <text x="22" y="31" font-family="ui-monospace, Consolas, monospace" font-size="10" fill="#55d7ff" letter-spacing="1.2">MODEL PHONE</text>
+    <text x="22" y="60" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#f4f7f2">llama-server</text>
+    <text x="22" y="82" font-family="ui-monospace, Consolas, monospace" font-size="10" fill="#8c99a9">model + chat UI</text>
+    <rect x="22" y="104" width="266" height="44" rx="11" fill="#b8ff3d" opacity="0.92"/>
+    <text x="36" y="131" font-family="ui-monospace, Consolas, monospace" font-size="10" font-weight="700" fill="#07100a">127.0.0.1:8080</text>
+  </g>
+
+  <g transform="translate(646 122)">
+    <rect width="310" height="170" rx="22" fill="#0b121c" stroke="#304157"/>
+    <text x="22" y="31" font-family="ui-monospace, Consolas, monospace" font-size="10" fill="#b8ff3d" letter-spacing="1.2">COMPUTE NODE</text>
+    <text x="22" y="60" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#f4f7f2">ggml-rpc-server</text>
+    <text x="22" y="82" font-family="ui-monospace, Consolas, monospace" font-size="10" fill="#8c99a9">CPU backend / no model</text>
+    <rect x="22" y="104" width="266" height="44" rx="11" fill="#101927" stroke="#55d7ff" stroke-opacity="0.6"/>
+    <text x="36" y="131" font-family="ui-monospace, Consolas, monospace" font-size="10" font-weight="700" fill="#55d7ff">0.0.0.0:50053</text>
+  </g>
+
+  <g transform="translate(384 174)">
+    <rect width="232" height="72" rx="16" fill="#0a111a" stroke="#b8ff3d" stroke-opacity="0.6"/>
+    <text x="116" y="27" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="9" fill="#8c99a9" letter-spacing="1.4">LOCAL NETWORK</text>
+    <text x="116" y="49" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#f4f7f2">ggml-rpc</text>
+    <path d="M-26 36 H-6 M238 36 H218" stroke="#b8ff3d" stroke-width="2" stroke-dasharray="4 4"/>
+    <path d="M-8 36 L-16 31 M-8 36 L-16 41 M220 36 L212 31 M220 36 L212 41" stroke="#b8ff3d" stroke-width="2"/>
+  </g>
+
+  <text x="44" y="328" font-family="ui-monospace, Consolas, monospace" font-size="9" fill="#8c99a9" letter-spacing="1">NO CLOUD / NO ACCOUNT / NO TELEMETRY</text>
+  <text x="956" y="328" text-anchor="end" font-family="ui-monospace, Consolas, monospace" font-size="9" fill="#b8ff3d" letter-spacing="1">UPSTREAM LLAMA.CPP</text>
+</svg>
