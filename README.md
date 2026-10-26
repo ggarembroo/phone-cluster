@@ -35,7 +35,7 @@
 </p>
 
 <p align="center">
-  <sub>UI preview. A real two-phone run and benchmark table ship with the first tagged release.</sub>
+  <sub>UI preview. A real two-phone run and benchmark table will be added after hardware validation.</sub>
 </p>
 
 ## Why this exists
