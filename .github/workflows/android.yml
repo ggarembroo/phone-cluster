@@ -11,14 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          lfs: false
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
-      - uses: android-actions/setup-android@v3
       - name: Build debug APK
         run: |
           chmod +x gradlew
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
           ./gradlew :app:assembleDebug --no-daemon
       - name: Upload APK
         uses: actions/upload-artifact@v4
