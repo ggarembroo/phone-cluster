@@ -58,7 +58,7 @@ make the moving parts visible, measurable, and replaceable.
 | **Local chat** | The model exposes a local `llama-server` endpoint and opens its chat UI in a native WebView. |
 | **Bring your own GGUF** | Pick any compatible model from Android's document picker. Files stay in private app storage. |
 | **Measure it** | One tap sends a deterministic completion request and reports decoded tokens per second. |
-| **Small surface** | Two native binaries, one activity, no analytics, no telemetry, no network permission beyond the local socket. |
+| **Small surface** | Two native binaries, one activity, no analytics, no telemetry, and no cloud client. |
 
 ## How it works
 
