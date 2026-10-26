@@ -11,10 +11,15 @@
 
 <p align="center">
   <a href="https://github.com/ggarembroo/phone-cluster/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ggarembroo/phone-cluster?style=social"></a>
+  <img alt="Release" src="https://img.shields.io/github/v/release/ggarembroo/phone-cluster?display_name=tag&sort=semver">
   <img alt="Android 8.0+" src="https://img.shields.io/badge/Android-8.0%2B-3DDC84?logo=android&logoColor=white">
   <img alt="llama.cpp" src="https://img.shields.io/badge/llama.cpp-standard-111111">
   <img alt="MIT" src="https://img.shields.io/badge/license-MIT-B8FF3D">
   <img alt="experimental" src="https://img.shields.io/badge/status-experimental-FF6572">
+</p>
+
+<p align="center">
+  <a href="https://github.com/ggarembroo/phone-cluster/releases/latest"><img alt="Download the APK" src="https://img.shields.io/badge/Download_APK-B8FF3D?style=for-the-badge&logo=android&logoColor=07100a"></a>
 </p>
 
 <p align="center">
